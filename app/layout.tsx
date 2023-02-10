@@ -1,5 +1,9 @@
 "use client"
 import { ChakraProvider } from '@chakra-ui/react';
+import { Features } from './features';
+import { Header } from './header';
+import { Pricing } from './pricing';
+
 export default function RootLayout({
   children,
 }: {
@@ -10,6 +14,9 @@ export default function RootLayout({
       <head />
       <body>
         <ChakraProvider>
+        <Header/>
+        <Pricing/>
+        <Features/>
         {children}
         </ChakraProvider>
       </body>
